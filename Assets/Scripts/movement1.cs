@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class movement1 : MonoBehaviour
@@ -18,7 +20,16 @@ public class movement1 : MonoBehaviour
     private float cooldownDuration = 2f;
     private float cooldownTimer = 0f;
     public int y = -2;
-    public Rigidbody rb;
+    private Rigidbody rb;
+
+
+
+
+    public GameObject addVFX;
+    public GameObject minusVFX;
+
+    public Transform transformVfx;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -37,6 +48,7 @@ public class movement1 : MonoBehaviour
                 gameObject.transform.localScale *= 1.25f;
                 canTrigger = false;
                 y -= 2;
+                Instantiate(addVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
             }
             else if (other.CompareTag("minus") && (gameObject.transform.localScale.magnitude > 0.125))
             {
@@ -45,7 +57,9 @@ public class movement1 : MonoBehaviour
                 gameObject.transform.localScale *= 0.8f;
                 canTrigger = false;
                 y -= 2;
+                Instantiate(minusVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
             }
+            StartCoroutine(Wait());
         }
 
     }
@@ -81,6 +95,15 @@ public class movement1 : MonoBehaviour
         {
             Fspeed *= 1.00001f;
         }
+       
+    }
+    private IEnumerator Wait()
+    {
+
+        yield return new WaitForSeconds(1f);
+        Destroy(GameObject.FindWithTag("addVFX"));
+        Destroy(GameObject.FindWithTag("minusVFX"));
+
     }
 
 }

@@ -7,6 +7,8 @@ TagManager:
   - Gate
   - add
   - minus
+  - addVFX
+  - minusVFX
   layers:
   - Default
   - TransparentFX

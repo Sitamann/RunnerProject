@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class movement2 : MonoBehaviour
@@ -18,7 +20,14 @@ public class movement2 : MonoBehaviour
     private float cooldownDuration = 2f;
     private float cooldownTimer = 0f;
     public int y = -2;
-    public Rigidbody rb;
+    private Rigidbody rb;
+
+
+
+    public GameObject addVFX;
+    public GameObject minusVFX;
+
+    public Transform transformVfx;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -28,18 +37,7 @@ public class movement2 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        Rigidbody rb = gameObject.GetComponent<Rigidbody>();        
-        if ((other.CompareTag("add"))&& (gameObject.transform.localScale.magnitude <  4))
-        {
-            rb.mass *= 1.7f;
-            gameObject.transform.localScale *= 1.1f;
-
-        }
-        else if (other.CompareTag("minus") && (gameObject.transform.localScale.magnitude > 0.25))
-        {
-            rb.mass *= 0.3f;
-            gameObject.transform.localScale *= 0.9f;
-        }      
+       
 
         if (canTrigger)
         {
@@ -50,6 +48,7 @@ public class movement2 : MonoBehaviour
                 gameObject.transform.localScale *= 1.2f;
                 canTrigger = false;
                 y -= 2;
+                Instantiate(addVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
             }
             else if (other.CompareTag("minus") && (gameObject.transform.localScale.magnitude > 0.0625))
             {
@@ -58,7 +57,9 @@ public class movement2 : MonoBehaviour
                 gameObject.transform.localScale *= 0.8f;
                 canTrigger = false;
                 y -= 2;
+                Instantiate(minusVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
             }
+            StartCoroutine(Wait());
         }
 
     }
@@ -94,6 +95,16 @@ public class movement2 : MonoBehaviour
         {
             Fspeed *= 1.00001f;
         }
+        
+    }
+
+    private IEnumerator Wait()
+    {
+
+        yield return new WaitForSeconds(1f);
+        Destroy(GameObject.FindWithTag("addVFX"));
+        Destroy(GameObject.FindWithTag("minusVFX"));
+
     }
 
 }
