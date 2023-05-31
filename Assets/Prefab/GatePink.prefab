@@ -252,8 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c8c6aec1cd0814ca6b24169e801efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: C:\Users\21693\Desktop\TextGate1.txt
-  filePath2: C:\Users\21693\Desktop\TextGate2.txt
+  filePath: C:\Users\SBS\Desktop\TextGate1.txt
+  filePath2: C:\Users\SBS\Desktop\TextGate2.txt
   textMeshPro: {fileID: 7560950318952478264}
   signe: 0
   player1: {fileID: 5160332873734210155, guid: df73dbf3bd83db040b6ab8e39e406cf7, type: 3}

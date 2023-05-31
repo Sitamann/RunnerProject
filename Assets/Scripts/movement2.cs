@@ -21,7 +21,8 @@ public class movement2 : MonoBehaviour
     private float cooldownTimer = 0f;
     public int y = -2;
     private Rigidbody rb;
-
+    private bool add = false;
+    private bool minus = false;
 
 
     public GameObject addVFX;
@@ -48,7 +49,7 @@ public class movement2 : MonoBehaviour
                 gameObject.transform.localScale *= 1.2f;
                 canTrigger = false;
                 y -= 2;
-                Instantiate(addVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
+                add = true;
             }
             else if (other.CompareTag("minus") && (gameObject.transform.localScale.magnitude > 0.0625))
             {
@@ -57,7 +58,7 @@ public class movement2 : MonoBehaviour
                 gameObject.transform.localScale *= 0.8f;
                 canTrigger = false;
                 y -= 2;
-                Instantiate(minusVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
+                minus = true;
             }
             StartCoroutine(Wait());
         }
@@ -73,6 +74,18 @@ public class movement2 : MonoBehaviour
             {
                 canTrigger = true;
                 cooldownTimer = 0f;
+            }
+
+            if (add == true)
+            {
+                Instantiate(addVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
+                add = false;
+            }
+
+            if (minus == true)
+            {
+                Instantiate(minusVFX, transformVfx.position, Quaternion.LookRotation(Vector3.up));
+                minus = false;
             }
         }
         float horizontalInput = Input.GetAxisRaw("Horizontal1"); // get the horizontal input
@@ -93,7 +106,7 @@ public class movement2 : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(targetPosition, transform.position.y, transform.position.z), ref velocity, smoothTime);
         if (Fspeed <= 20)
         {
-            Fspeed *= 1.00001f;
+            Fspeed *= 1.00005f;
         }
         
     }

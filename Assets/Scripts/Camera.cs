@@ -11,7 +11,7 @@ public class Camera : MonoBehaviour
         transform.Translate(Vector3.forward * Fspeed * Time.deltaTime);
         if (Fspeed <= 20)
         {
-            Fspeed *= 1.00001f;
+            Fspeed *= 1.00005f;
         }
     }
 }
