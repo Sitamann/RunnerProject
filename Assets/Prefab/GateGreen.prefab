@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.392204, y: -28.48003}
+  m_AnchoredPosition: {x: -39.392204, y: -28.08}
   m_SizeDelta: {x: 11.1738, y: 22.8077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5086501480572417666
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 12
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281216558
-  m_fontColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -252,12 +252,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c8c6aec1cd0814ca6b24169e801efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: C:\Users\SBS\Desktop\TextGate1.txt
-  filePath2: C:\Users\SBS\Desktop\TextGate2.txt
+  filePath: {fileID: 4900000, guid: 67a1d4b5a42f99b449a0f9bf1feaca93, type: 3}
+  filePath2: {fileID: 4900000, guid: 128d6e67f3631fc44af3d54e829e614f, type: 3}
+  filePath3: {fileID: 4900000, guid: 9682c52846f77df48ab6734d6276e7a1, type: 3}
+  filePath4: {fileID: 4900000, guid: 12249e786b1ca11488604ff48e99e397, type: 3}
+  filePath5: {fileID: 4900000, guid: 1ad8feb9a433d5a4e8f6b043b7680cf2, type: 3}
+  filePath6: {fileID: 4900000, guid: dfb27cf58f5ce834e8bd16165896b13e, type: 3}
   textMeshPro: {fileID: 7560950318952478264}
   signe: 0
   player1: {fileID: 5160332873734210155, guid: df73dbf3bd83db040b6ab8e39e406cf7, type: 3}
   player2: {fileID: 4767849542456259209, guid: 4944b2c75090101409d5221485204365, type: 3}
+  scoreIncreaseRate: 1
 --- !u!222 &4244955382924401145
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -62,9 +62,13 @@ public class Spawner : MonoBehaviour
         float xPos4 = 3f;
 
         // Instantiate the object prefabs at their respective positions
-        Instantiate(objectPrefabs[0], new Vector3(xPos1, spawnPositionY+2, spawnPositionZ - 25f), Quaternion.identity);
-        Instantiate(objectPrefabs[1], new Vector3(xPos2, spawnPositionY+2, spawnPositionZ - 25f), Quaternion.identity);
-        Instantiate(objectPrefabs[2], new Vector3(xPos3, spawnPositionY+2, spawnPositionZ - 25f), Quaternion.identity);
-        Instantiate(objectPrefabs[3], new Vector3(xPos4, spawnPositionY+2, spawnPositionZ - 25f), Quaternion.identity);
+        Instantiate(objectPrefabs[1], new Vector3(xPos1, spawnPositionY + 2, spawnPositionZ - 25f), Quaternion.identity);
+        Instantiate(objectPrefabs[2], new Vector3(xPos2, spawnPositionY + 2, spawnPositionZ - 25f), Quaternion.identity);
+        Instantiate(objectPrefabs[3], new Vector3(xPos3, spawnPositionY + 2, spawnPositionZ - 25f), Quaternion.identity);
+        Instantiate(objectPrefabs[4], new Vector3(xPos4, spawnPositionY + 2, spawnPositionZ - 25f), Quaternion.identity);
+        Instantiate(objectPrefabs[1], new Vector3(xPos1, spawnPositionY + 2, spawnPositionZ - 50f), Quaternion.identity);
+        Instantiate(objectPrefabs[2], new Vector3(xPos2, spawnPositionY + 2, spawnPositionZ - 50f), Quaternion.identity);
+        Instantiate(objectPrefabs[3], new Vector3(xPos3, spawnPositionY + 2, spawnPositionZ - 50f), Quaternion.identity);
+        Instantiate(objectPrefabs[4], new Vector3(xPos4, spawnPositionY + 2, spawnPositionZ - 50f), Quaternion.identity);
     }
 }

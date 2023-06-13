@@ -9,6 +9,7 @@ TagManager:
   - minus
   - addVFX
   - minusVFX
+  - Limit
   layers:
   - Default
   - TransparentFX

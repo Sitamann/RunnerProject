@@ -1,0 +1,147 @@
+﻿# Turbo Builder PRO - Release notes
+
+## 2023.1.0 - 27.01.2023
+* Support for Unity 2023
+* Updated to Common 2023.1.0
+
+## 2022.2.2 - 02.12.2022
+* Project cleanup
+* Updated to Common 2022.2.2
+
+## 2022.2.1 - 06.11.2022
+* React the correct way to user cancellation of builds
+* Editor integration improved
+* Updated to Common 2022.2.1
+
+## 2022.2.0 - 15.08.2022
+* ZIP-compression enabled
+* Default for "Version Control" set to "None"
+* Minimal supported version is now Unity 2019.4 or newer
+* Updated to Common 2022.2.0
+
+## 2022.1.1 - 30.05.2022
+* Editor-folders moved to Scripts
+* Updated to Common 2022.1.2
+
+## 2022.1.0 - 23.03.2022
+* Editor integration improved
+* Fixes for namespaces
+* Updated to Common 2022.1.0
+
+## 2021.2.8 - 29.12.2021
+* Updated to Common 2021.3.6
+
+## 2021.2.7 - 19.11.2021
+* Updated to Common 2021.3.5
+
+## 2021.2.6 - 12.11.2021
+* SwitchBackAfterBuild added
+* Cancel builds if user chooses "Cancel" in the save scene dialog
+* Linux-extension fixed for builds with Unity 2019.2+
+* Updated to Common 2021.3.4
+
+## 2021.2.5 - 27.09.2021
+* Updated to Common 2021.3.3
+
+## 2021.2.4 - 31.08.2021
+* Code cleanup
+* Updated to Common 2021.3.1
+
+## 2021.2.3 - 18.08.2021
+* Updated to Common 2021.3.0
+
+## 2021.2.2 - 04.06.2021
+* Updated to Common 2021.2.2
+
+## 2021.2.1 - 06.05.2021
+* Fix for UI ("Disabled in Play-mode")
+
+## 2021.2.0 - 14.04.2021
+* AddressableRebuilder added
+* Updated to Common 2021.2.0
+
+## 2021.1.1 - 26.02.2021
+* Updated to Common 2021.1.1
+
+## 2021.1.0 - 03.01.2021
+* URLs updated
+* Updated to Common 2021.1.0
+
+## 2020.5.4 - 17.12.2020
+* Improved for Unity 2020.2
+* Documentation updated
+* Updated to Common 2020.4.8
+
+## 2020.5.3 - 15.12.2020
+* Update of Applicaton.productName and Application.version at run
+* Editor integration improved
+
+## 2020.5.2 - 13.12.2020
+* Planned final release for 2020
+* Example integration improved
+* New Youtube video added: https://youtu.be/DewnM7GQ2x0
+* Updated to Common 2020.4.7
+
+## 2020.5.1 - 09.12.2020
+* "Add Version" added
+* Updated to Common 2020.4.6
+
+## 2020.5.0 - 27.11.2020
+* Build with selected scenes
+
+## 2020.4.4 - 30.10.2020
+* Fix for "Build all"
+* Auto save disabled per default
+
+## 2020.4.3 - 19.10.2020
+* Configurable date format added
+* "Build" no longer spawns an UI error in the console
+* UI improved for Unity 2019 and newer
+* Auto save of all modified scenes added
+
+## 2020.4.2 - 15.10.2020
+* Fix for 2019 and newer
+
+## 2020.4.1 - 15.10.2020
+* Code improved
+* Updated to Common 2020.4.4
+
+## 2020.4.0 - tbd
+* Big code overhaul
+* Minimal version is now Unity 2018.4 and newer
+* Updated to Common 2020.4.2
+
+## 2020.3.0 - 03.07.2020
+* Events added for "Builder":
+  * OnBuildStart
+  * OnBuildComplete
+  * OnBuildAllStart
+  * OnBuildAllComplete
+* Updated to Common 2020.3.0
+
+## 2020.2.4 - 19.06.2020
+* Unnecessary files deleted
+* Updated to Common 2020.2.1
+
+## 2020.2.3 - 24.05.2020
+* Updated to Common 2020.2.0
+
+## 2020.2.2 - 18.05.2020
+* Editor improved
+* Compile defines can now be disabled
+* Integration for Unity 2020 improved
+
+## 2020.2.1 - 15.04.2020
+* Documentation updated
+* Updated to Common 2020.1.3
+
+## 2020.2.0 - 25.03.2020
+* Builder: methods "Build" and "BuildAll" are returning a bool to indicate if the builds were successful
+* PlasticSCM added as VCS option
+* Integration for RockTomate
+
+## 2020.1.1 - 05.03.2020
+* Updated to Common 2020.1.2
+
+## 2020.1.0 - 23.02.2020
+* Production release for UAS
